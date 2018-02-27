@@ -1,15 +1,12 @@
-HOLA
-<!-- 
-<div [ngClass]="{'is-user': user, 'is-anon': anon}">
-  <div *ngIf="loading">
-    <span class="username text">loading...</span>
-  </div>
-  <div *ngIf="!loading && !!user">
-    <a [routerLink]="['/profile']">{{user.username}}</a>
-    <a [routerLink]="['/logout']">logout</a>
-  </div>
-  <div *ngIf="!loading && anon">
-    <a [routerLink]="['/login']">login</a>
-    <a [routerLink]="['/signup']">signup</a>
-  </div>
-</div> -->
+<header>
+    <p *ngIf="!user">Welcome, please Login or Sign Up</p>
+    <div *ngIf="user">
+        Welcome {{user.username}}
+    <a (click)="logout()">logout</a>
+    </div>
+    
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>HOLA</footer>

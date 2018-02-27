@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
@@ -12,14 +13,17 @@ import { InitAuthGuardService } from './guards/init-auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthLoginComponent } from './components/auth-login/auth-login.component';
+import { AuthSignupComponent } from './components/auth-signup/auth-signup.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 
 // -- routes
 
  const routes: Routes = [
-   { path: '',  component: AppComponent, canActivate: [ InitAuthGuardService ] },
-  //  { path: 'login',  component: AuthLoginPageComponent, canActivate: [ RequireAnonGuardService ] },
-  //  { path: 'signup',  component: AuthSignupPageComponent, canActivate: [ RequireAnonGuardService ] },
+   { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
+   { path: 'logout',  component: HomePageComponent, canActivate: [ RequireUserGuardService ] },
+  //  { path: 'signup',  component: AuthSignupComponent, canActivate: [ RequireAnonGuardService ] },
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
  ];
@@ -27,18 +31,23 @@ import { RouterModule, Routes } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    ],
+    AuthLoginComponent,
+    AuthSignupComponent,
+    HomePageComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
-  providers: [InitAuthGuardService,
+  providers: [
+    InitAuthGuardService,
     RequireAnonGuardService,
     RequireUserGuardService,
     AuthService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
