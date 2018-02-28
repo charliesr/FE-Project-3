@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngIf=!user class="form-login">
+  <div class="form-login">
     <p class="title">LOGIN</p>
     <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
