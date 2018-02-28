@@ -20,6 +20,8 @@ import { AuthLoginComponent } from './components/auth-login/auth-login.component
 import { AuthSignupComponent } from './components/auth-signup/auth-signup.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProfileFoodCompanyComponent } from './pages/profile-food-company/profile-food-company.component';
+import { ProfilePackagingCompanyComponent } from './pages/profile-packaging-company/profile-packaging-company.component';
+
 
 
 // -- routes
@@ -28,6 +30,7 @@ import { ProfileFoodCompanyComponent } from './pages/profile-food-company/profil
    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
    { path: 'logout',  component: HomePageComponent, canActivate: [ RequireUserGuardService ] },
    { path: 'profile',  component: ProfileFoodCompanyComponent, canActivate: [ RequireUserGuardService ] },
+   { path: 'company',  component: ProfilePackagingCompanyComponent, canActivate: [ RequireUserGuardService ] },
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
  ];
@@ -38,7 +41,8 @@ import { ProfileFoodCompanyComponent } from './pages/profile-food-company/profil
     AuthLoginComponent,
     AuthSignupComponent,
     HomePageComponent,
-    ProfileFoodCompanyComponent
+    ProfileFoodCompanyComponent,
+    ProfilePackagingCompanyComponent
   ],
   imports: [
     BrowserModule,

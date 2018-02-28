@@ -33,7 +33,7 @@ export class AuthSignupComponent implements OnInit {
         .signup(data)
         .then(result => {
           if (result.foodCompany === true) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/company']);
           } else {
             this.router.navigate(['/profile']);
           }
