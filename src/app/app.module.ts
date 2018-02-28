@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthLoginComponent } from './components/auth-login/auth-login.component';
 import { AuthSignupComponent } from './components/auth-signup/auth-signup.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProfileFoodCompanyComponent } from './pages/profile-food-company/profile-food-company.component';
 
 
 // -- routes
@@ -23,7 +24,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
  const routes: Routes = [
    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
    { path: 'logout',  component: HomePageComponent, canActivate: [ RequireUserGuardService ] },
-  //  { path: 'signup',  component: AuthSignupComponent, canActivate: [ RequireAnonGuardService ] },
+   { path: 'profile',  component: ProfileFoodCompanyComponent, canActivate: [ RequireUserGuardService ] },
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
  ];
@@ -33,7 +34,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     AppComponent,
     AuthLoginComponent,
     AuthSignupComponent,
-    HomePageComponent
+    HomePageComponent,
+    ProfileFoodCompanyComponent
   ],
   imports: [
     BrowserModule,

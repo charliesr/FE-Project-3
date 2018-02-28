@@ -32,7 +32,12 @@ export class AuthSignupComponent implements OnInit {
       this.authService
         .signup(data)
         .then(result => {
-          this.router.navigate(['/']);
+          if (result.foodCompany === true) {
+            this.router.navigate(['/']);
+          } else {
+            this.router.navigate(['/profile']);
+          }
+
         })
         .catch(err => {
           this.error = err.error.error;
