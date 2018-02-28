@@ -59,24 +59,22 @@ footer{
 }
 .form-login{
     
-    width: 25vw;
-    height: 25vh;
-    /* margin: auto; */
-    margin: 10vh auto;
-  
+     /* margin: auto; */
+    margin: auto;
 }
-.form-signup{
-    
-    width: 25vw;
-    height: 25vh;
-    /* margin: auto; */
-    margin: 0 auto;
-   
-}
+
 .title{
     font-weight: bold;
     text-align: center;
 }
 .field{
     margin-bottom: 1vh;
+}
+
+tab .tabs__panel[class]{
+    background: blue;
+    width: 50%;
+    margin: auto;
+    height: 50%;
+    border-radius: 5px;
 }
