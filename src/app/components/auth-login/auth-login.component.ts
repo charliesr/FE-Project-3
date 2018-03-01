@@ -31,7 +31,7 @@ export class AuthLoginComponent implements OnInit {
       this.processing = true;
       this.authService.login(data)
         .then((result) => {
-      if (result.foodCompany === true) {
+      if (result.foodCompany === false) {
         this.router.navigate(['/company']);
       } else {
         this.router.navigate(['/profile']);

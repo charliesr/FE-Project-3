@@ -15,4 +15,12 @@ export class QuotationsService {
        return this.httpClient.get(`${this.API_URL}/quotations`, options)
       .toPromise();
   }
+  addTask(newQuotation) {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.post(`${this.API_URL}/quotations`, {name: newQuotation}, options)
+    .toPromise();
+  }
+
 }

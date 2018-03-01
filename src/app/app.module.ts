@@ -21,6 +21,7 @@ import { ProfileFoodCompanyComponent } from './pages/profile-food-company/profil
 import { ProfilePackagingCompanyComponent } from './pages/profile-packaging-company/profile-packaging-company.component';
 import { NewFormFoodComponent } from './components/new-form-food/new-form-food.component';
 import { ListFoodCompanyComponent } from './components/list-food-company/list-food-company.component';
+import { FormQuotComponent } from './pages/form-quot/form-quot.component';
 
 
 
@@ -28,9 +29,9 @@ import { ListFoodCompanyComponent } from './components/list-food-company/list-fo
 
  const routes: Routes = [
    { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
-   { path: 'logout', component: HomePageComponent, canActivate: [RequireUserGuardService] }, //no necesario
-   { path: 'profile',  component: ProfileFoodCompanyComponent, canActivate: [ RequireUserGuardService ] }, 
+   { path: 'profile',  component: ProfileFoodCompanyComponent, canActivate: [ RequireUserGuardService ] },
    { path: 'company',  component: ProfilePackagingCompanyComponent, canActivate: [ RequireUserGuardService ] },
+   { path: 'newQuotation', component: FormQuotComponent, canActivate: [ RequireUserGuardService ] },
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
  ];
@@ -44,7 +45,8 @@ import { ListFoodCompanyComponent } from './components/list-food-company/list-fo
     ProfileFoodCompanyComponent,
     ProfilePackagingCompanyComponent,
     NewFormFoodComponent,
-    ListFoodCompanyComponent
+    ListFoodCompanyComponent,
+    FormQuotComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
 <ul *ngIf="quotations">
   <li *ngFor="let quotation of quotations">
     
-    <div *ngIf="quotation.answered === true">
+    <div *ngIf="quotation.answered === false">
       {{quotation.name}}
       {{quotation.answered}}
       {{quotation.createdBy}}
