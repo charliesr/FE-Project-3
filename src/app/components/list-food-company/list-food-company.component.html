@@ -4,9 +4,11 @@
   <li *ngFor="let quotation of quotations">
     
     <div *ngIf="quotation.answered === false">
+      
       {{quotation.name}}
       {{quotation.answered}}
       {{quotation.createdBy}}
+      
     </div>
   </li>
 </ul>

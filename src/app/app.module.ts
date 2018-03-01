@@ -11,6 +11,8 @@ import { QuotationsService } from './services/quotations.service';
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
+import { RequireFoodService } from './guards/require-food.service';
+import { PackUserService } from './guards/pack-user.service';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -25,12 +27,13 @@ import { FormQuotComponent } from './pages/form-quot/form-quot.component';
 
 
 
+
 // -- routes
 
  const routes: Routes = [
-   { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
-   { path: 'profile',  component: ProfileFoodCompanyComponent, canActivate: [ RequireUserGuardService ] },
-   { path: 'company',  component: ProfilePackagingCompanyComponent, canActivate: [ RequireUserGuardService ] },
+   { path: '', component: HomePageComponent, canActivate: [RequireAnonGuardService ] },
+   { path: 'profile', component: ProfileFoodCompanyComponent, canActivate: [RequireFoodService ] },
+   { path: 'company', component: ProfilePackagingCompanyComponent, canActivate: [PackUserService ] },
    { path: 'newQuotation', component: FormQuotComponent, canActivate: [ RequireUserGuardService ] },
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
@@ -60,6 +63,8 @@ import { FormQuotComponent } from './pages/form-quot/form-quot.component';
     InitAuthGuardService,
     RequireAnonGuardService,
     RequireUserGuardService,
+    RequireFoodService,
+    PackUserService,
     AuthService,
     QuotationsService
   ],
