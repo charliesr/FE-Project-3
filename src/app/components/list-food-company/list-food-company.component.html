@@ -1,14 +1,13 @@
 <h1>Quotations</h1>
 <div *ngIf="!quotations">NO FUNSIONA, BALE?</div>
-<ul *ngIf="quotations">
-  <li *ngFor="let quotation of quotations">
-    
-    <div *ngIf="quotation.answered === false">
-      
-      {{quotation.name}}
-      {{quotation.answered}}
-      {{quotation.createdBy}}
-      
+<div class="items-wrap">
+  <div *ngFor="let quotation of quotations" class="for-div">
+    <div *ngIf="quotations && quotation.answered === false" class="items">
+      <p>Name: {{quotation.name}}</p>
+      <p>Answered: <span *ngIf="quotation.answered === false">Not Answered</span></p>
+      <p>Created By: {{quotation.createdBy.username}}</p>
     </div>
-  </li>
-</ul>
+  <div>
+  </div>
+      
+

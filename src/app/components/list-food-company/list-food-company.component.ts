@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { QuotationsService } from './../../services/quotations.service';
+import { Component, OnInit, Input } from '@angular/core';
+
 @Component({
   selector: 'app-list-food-company',
   templateUrl: './list-food-company.component.html',
@@ -7,12 +7,10 @@ import { QuotationsService } from './../../services/quotations.service';
 })
 export class ListFoodCompanyComponent implements OnInit {
 
-  quotations: Array<any>;
-  constructor(private quotationsService: QuotationsService) {}
+@Input() quotations: string;
+
+  constructor() {}
 
   ngOnInit() {
-    this.quotationsService
-      .getList()
-      .then(quotations => (this.quotations = quotations));
   }
 }
