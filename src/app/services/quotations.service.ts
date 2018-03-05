@@ -2,9 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 
+
+import { environment } from '../../environments/environment';
+const apiUrl = environment.apiUrl + '/quotations';
+
+
 @Injectable()
 export class QuotationsService {
-  API_URL = 'http://localhost:3000';
+
 
   constructor(private httpClient: HttpClient) {}
 
@@ -12,14 +17,14 @@ export class QuotationsService {
     const options = {
       withCredentials: true
     };
-       return this.httpClient.get(`${this.API_URL}/quotations/by-user`, options)
+       return this.httpClient.get(`${apiUrl}/by-user`, options)
       .toPromise();
   }
   addTask(newQuotation) {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/quotations/new`, {name: newQuotation}, options)
+    return this.httpClient.post(`${apiUrl}/new`, {name: newQuotation}, options)
     .toPromise();
   }
 
@@ -27,7 +32,7 @@ export class QuotationsService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.API_URL}/quotations/$(id)`, options)
+    return this.httpClient.get(`${apiUrl}/$(id)`, options)
       .toPromise();
   }
 
