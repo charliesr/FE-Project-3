@@ -26,6 +26,7 @@ import { ListFoodCompanyComponent } from './components/list-food-company/list-fo
 import { FormQuotComponent } from './pages/form-quot/form-quot.component';
 import { QuotationComponent } from './components/quotation/quotation.component';
 import { SingleQuotationComponent } from './pages/single-quotation/single-quotation.component';
+import { ListPackagingCompanyComponent } from './components/list-packaging-company/list-packaging-company.component';
 
 
 
@@ -54,7 +55,8 @@ import { SingleQuotationComponent } from './pages/single-quotation/single-quotat
     ListFoodCompanyComponent,
     FormQuotComponent,
     QuotationComponent,
-    SingleQuotationComponent
+    SingleQuotationComponent,
+    ListPackagingCompanyComponent
   ],
   imports: [
     BrowserModule,

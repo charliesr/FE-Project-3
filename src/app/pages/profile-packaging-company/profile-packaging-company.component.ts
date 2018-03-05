@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuotationsService } from './../../services/quotations.service';
+
 
 @Component({
   selector: 'app-profile-packaging-company',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePackagingCompanyComponent implements OnInit {
 
-  constructor() { }
+  quotations: Array<any>;
+
+  constructor(private quotationsService: QuotationsService) { }
 
   ngOnInit() {
+    this.quotationsService
+      .getFullList()
+      .then(quotations => (this.quotations = quotations));
   }
-
 }

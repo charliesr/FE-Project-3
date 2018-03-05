@@ -20,6 +20,13 @@ export class QuotationsService {
        return this.httpClient.get(`${apiUrl}/by-user`, options)
       .toPromise();
   }
+  getFullList(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${apiUrl}/list-all`, options)
+      .toPromise();
+  }
   addTask(newQuotation) {
     const options = {
       withCredentials: true

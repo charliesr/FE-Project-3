@@ -1,0 +1,13 @@
+<h1>Quotations</h1>
+<div *ngIf="!quotations">NO FUNSIONA, BALE?</div>
+<div class="items-wrap">
+  <div *ngFor="let quotation of quotations" class="for-div">
+    <div *ngIf="quotations && quotation.answered === false" class="items" [routerLink]="['/', quotation._id]">
+      <p>Name: {{quotation.name}}</p>
+      <p>Answered:
+        <span *ngIf="quotation.answered === false">Not Answered</span>
+      </p>
+      <p>Created By: {{quotation.createdBy.username}}</p>
+    </div>
+    <div>
+    </div>
