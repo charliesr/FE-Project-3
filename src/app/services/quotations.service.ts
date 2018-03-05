@@ -23,4 +23,12 @@ export class QuotationsService {
     .toPromise();
   }
 
+  getOne(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/quotations/$(id)`, options)
+      .toPromise();
+  }
+
 }
