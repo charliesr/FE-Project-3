@@ -68,7 +68,7 @@ export class AuthService {
       .post(`${apiUrl}/logout`, {}, options)
       .toPromise()
       .then(() => this.setUser());
-  }
+ }
 
   getUser(): any {
     return this.user;

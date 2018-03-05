@@ -28,11 +28,11 @@ export class QuotationsService {
     .toPromise();
   }
 
-  getOne(): Promise<any> {
+  getOne(id): Promise<any> {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${apiUrl}/$(id)`, options)
+    return this.httpClient.get(`${apiUrl}/${id}`, options )
       .toPromise();
   }
 

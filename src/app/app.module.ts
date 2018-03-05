@@ -24,9 +24,8 @@ import { ProfilePackagingCompanyComponent } from './pages/profile-packaging-comp
 import { NewFormFoodComponent } from './components/new-form-food/new-form-food.component';
 import { ListFoodCompanyComponent } from './components/list-food-company/list-food-company.component';
 import { FormQuotComponent } from './pages/form-quot/form-quot.component';
-import { QuotationComponent } from './pages/quotation/quotation.component';
-import { SingleQuotationComponent } from './components/single-quotation/single-quotation.component';
-
+import { QuotationComponent } from './components/quotation/quotation.component';
+import { SingleQuotationComponent } from './pages/single-quotation/single-quotation.component';
 
 
 
@@ -37,7 +36,7 @@ import { SingleQuotationComponent } from './components/single-quotation/single-q
    { path: 'profile', component: ProfileFoodCompanyComponent, canActivate: [RequireFoodService ] },
    { path: 'company', component: ProfilePackagingCompanyComponent, canActivate: [PackUserService ] },
    { path: 'newQuotation', component: FormQuotComponent, canActivate: [ RequireUserGuardService ] },
-   { path: ':id', component: SingleQuotationComponent, canActivate: [RequireFoodService] },
+   { path: ':_id', component: SingleQuotationComponent, canActivate: [RequireFoodService] },
 
   //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
@@ -55,7 +54,7 @@ import { SingleQuotationComponent } from './components/single-quotation/single-q
     ListFoodCompanyComponent,
     FormQuotComponent,
     QuotationComponent,
-    SingleQuotationComponent,
+    SingleQuotationComponent
   ],
   imports: [
     BrowserModule,
