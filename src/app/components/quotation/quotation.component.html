@@ -2,3 +2,7 @@
   {{quotations?.name}}
   Answered: <span *ngIf="quotations?.answered === false">Not yet</span>
 </p>
+<div *ngIf="user?.foodCompany===false">
+  <a [routerLink]="['/priceless',id]">PRICE THIS PRODUCT</a>
+</div>
+

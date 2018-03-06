@@ -42,5 +42,14 @@ export class QuotationsService {
     return this.httpClient.get(`${apiUrl}/${id}`, options )
       .toPromise();
   }
-
+  updateQuotation(data, id) {
+    const options = {
+      withCredentials: true
+    };
+    const newData = {
+      price: data,
+    };
+    return this.httpClient.post(`${apiUrl}/${id}`, newData, options)
+      .toPromise();
+  }
 }

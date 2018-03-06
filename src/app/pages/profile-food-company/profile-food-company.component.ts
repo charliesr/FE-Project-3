@@ -9,7 +9,7 @@ import { QuotationsService } from './../../services/quotations.service';
 export class ProfileFoodCompanyComponent implements OnInit {
 
   quotations: Array<any>;
-  constructor(private quotationsService: QuotationsService) { }
+  constructor(private quotationsService: QuotationsService, ) { }
 
   ngOnInit() {
     this.quotationsService

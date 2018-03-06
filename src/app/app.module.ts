@@ -27,6 +27,8 @@ import { FormQuotComponent } from './pages/form-quot/form-quot.component';
 import { QuotationComponent } from './components/quotation/quotation.component';
 import { SingleQuotationComponent } from './pages/single-quotation/single-quotation.component';
 import { ListPackagingCompanyComponent } from './components/list-packaging-company/list-packaging-company.component';
+import { NewPriceComponent } from './components/new-price/new-price.component';
+import { PackPriceComponent } from './pages/pack-price/pack-price.component';
 
 
 
@@ -34,12 +36,14 @@ import { ListPackagingCompanyComponent } from './components/list-packaging-compa
 
  const routes: Routes = [
    { path: '', component: HomePageComponent, canActivate: [RequireAnonGuardService ] },
-   { path: 'profile', component: ProfileFoodCompanyComponent, canActivate: [RequireFoodService ] },
-   { path: 'company', component: ProfilePackagingCompanyComponent, canActivate: [PackUserService ] },
-   { path: 'newQuotation', component: FormQuotComponent, canActivate: [ RequireUserGuardService ] },
-   { path: ':_id', component: SingleQuotationComponent, canActivate: [RequireFoodService] },
+   { path: 'profile', component: ProfileFoodCompanyComponent, canActivate: [RequireFoodService] },
+   { path: 'company', component: ProfilePackagingCompanyComponent, canActivate: [PackUserService] },
+   { path: 'newQuotation', component: FormQuotComponent, canActivate: [RequireFoodService] },
+   { path: 'priceless/:id', component: PackPriceComponent, canActivate: [PackUserService]},
+   { path: ':_id', component: SingleQuotationComponent, canActivate: [RequireUserGuardService]},
 
-  //  { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+
+   // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
    { path: '**', redirectTo: '' }
  ];
 
@@ -56,7 +60,9 @@ import { ListPackagingCompanyComponent } from './components/list-packaging-compa
     FormQuotComponent,
     QuotationComponent,
     SingleQuotationComponent,
-    ListPackagingCompanyComponent
+    ListPackagingCompanyComponent,
+    NewPriceComponent,
+    PackPriceComponent
   ],
   imports: [
     BrowserModule,
