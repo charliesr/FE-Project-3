@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-pack-price',
   templateUrl: './pack-price.component.html',
-  styleUrls: ['./pack-price.component.css']
+  styleUrls: ['./pack-price.component.scss']
 })
 export class PackPriceComponent implements OnInit {
 

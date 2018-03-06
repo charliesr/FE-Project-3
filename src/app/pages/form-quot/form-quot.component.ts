@@ -5,7 +5,7 @@ import { QuotationsService } from '../../services/quotations.service';
 @Component({
   selector: 'app-form-quot',
   templateUrl: './form-quot.component.html',
-  styleUrls: ['./form-quot.component.css']
+  styleUrls: ['./form-quot.component.scss']
 })
 export class FormQuotComponent implements OnInit {
   quotations;

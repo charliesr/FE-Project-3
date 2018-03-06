@@ -4,7 +4,7 @@ import { QuotationsService } from './../../services/quotations.service';
 @Component({
   selector: 'app-profile-food-company',
   templateUrl: './profile-food-company.component.html',
-  styleUrls: ['./profile-food-company.component.css']
+  styleUrls: ['./profile-food-company.component.scss']
 })
 export class ProfileFoodCompanyComponent implements OnInit {
 

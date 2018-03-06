@@ -5,7 +5,7 @@ import { AuthService } from './../../services/auth.service';
 @Component({
   selector: 'app-quotation',
   templateUrl: './quotation.component.html',
-  styleUrls: ['./quotation.component.css']
+  styleUrls: ['./quotation.component.scss']
 })
 export class QuotationComponent implements OnInit {
   @Input() quotations: any;

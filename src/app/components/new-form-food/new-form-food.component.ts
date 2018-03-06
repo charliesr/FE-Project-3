@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-new-form-food',
   templateUrl: './new-form-food.component.html',
-  styleUrls: ['./new-form-food.component.css']
+  styleUrls: ['./new-form-food.component.scss']
 })
 export class NewFormFoodComponent implements OnInit {
   name: any;

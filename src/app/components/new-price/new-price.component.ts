@@ -3,7 +3,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-new-price',
   templateUrl: './new-price.component.html',
-  styleUrls: ['./new-price.component.css']
+  styleUrls: ['./new-price.component.scss']
 })
 export class NewPriceComponent implements OnInit {
   processing = false;

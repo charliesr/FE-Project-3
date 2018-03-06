@@ -5,7 +5,7 @@ import { QuotationsService } from './../../services/quotations.service';
 @Component({
   selector: 'app-single-quotation',
   templateUrl: './single-quotation.component.html',
-  styleUrls: ['./single-quotation.component.css']
+  styleUrls: ['./single-quotation.component.scss']
 })
 export class SingleQuotationComponent implements OnInit {
   quotationid: String;
