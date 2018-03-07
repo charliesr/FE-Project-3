@@ -2,8 +2,9 @@
 
 .items-wrap{
     background: $color3;
-    margin: 0 2% auto 2%;
+    margin: auto ;
     border: 2px solid $color4;
+    max-width: 600px;
 }
 .items{
     background: black;
@@ -49,6 +50,12 @@
     background: $color2;
     border-bottom: 1px solid $color4;
     padding: 1%;
-
+        &:hover{
+            border: 1px solid $color3;
+            margin-left: 2%;
+            margin-right:2%;
+             opacity: 0.9;
+        }
+    cursor: pointer;
    
 }

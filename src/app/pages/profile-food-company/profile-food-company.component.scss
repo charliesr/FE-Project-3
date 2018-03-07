@@ -10,7 +10,8 @@
     border: 1px solid $color4;
     cursor: pointer;
     &:hover{
-        background: $color1;
+        background: $color2;
     }
     margin-top: 5%;
+    max-width: 150px;
 }

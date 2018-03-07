@@ -2,7 +2,7 @@
     <div class="title">NEW QUOTATION</div>
     <form (ngSubmit)="newQuotationForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
         <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-            <label>Producto</label>
+            <label>Product</label>
             <input class="input" type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required minlength="4" [disabled]="processing"
             />
         </div>

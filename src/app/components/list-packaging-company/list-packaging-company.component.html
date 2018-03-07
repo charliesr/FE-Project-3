@@ -1,22 +1,34 @@
 <h1>Quotations</h1>
 <div *ngIf="!quotations">NO FUNSIONA, BALE?</div>
 <div class="items-wrap">
+  <div class="container-table">
+    <div class="title-table">Name</div>
+    <div class="title-table">Answered</div>
+    <div class="title-table">Date</div>
+    <div class="title-table">Food Company</div>
+  </div>
   <div *ngFor="let quotation of quotations" class="for-div">
     <div *ngIf="quotations && quotation.answered === false" class="items" [routerLink]="['/', quotation._id]">
-      <p>Name: {{quotation.name}}</p>
-      <p>Answered:
-        <span *ngIf="quotation.answered === false">Not Answered</span>
-      </p>
-      <p>Created By: {{quotation.createdBy.username}}</p>
+   <p class="name-table">{{quotation.name}}</p>
+      <p class="answered-table-notchecked"><span *ngIf="quotation.answered === false">❌</span></p>
+      <p class="date-table"><span *ngIf="quotation.answered === false">{{quotation.date}}</span></p>
+      <p class="date-table"><span *ngIf="quotation.answered === false">{{quotation.createdBy.username}}</span></p>
     </div>
-
     <div *ngIf="quotations && quotation.answered === true" class="items" [routerLink]="['/', quotation._id]">
-      <p>Name: {{quotation.name}}</p>
-      <p>Answered:
-        <span *ngIf="quotation.answered === true">Answered</span>
-      </p>
-      <p>Created By: {{quotation.createdBy.username}}</p>
+      <p class="name-table">{{quotation.name}}</p>
+      <p class="answered-table-checked"><span *ngIf="quotation.answered === true">✓</span></p>
+      <p class="date-table"><span *ngIf="quotation.answered === true">{{quotation.date}}</span></p>
+      <p class="date-table"><span *ngIf="quotation.answered === true">{{quotation.createdBy.username}}</span></p>
     </div>
-
-    <div>
-    </div>
+  </div>
+</div>
+ 
+     
+     
+     
+     
+     
+     
+     
+     
+    

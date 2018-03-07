@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="message-intro" *ngIf="!user">Welcome, please Log In or Sign Up</div>
-        <div *ngIf="user">Welcome {{user.username}}
+        <div  class="title" *ngIf="user">Welcome {{user.username}}
             <div class="logout" *ngIf="user">
                 <a (click)="logout()">logout</a>
             </div>
@@ -9,7 +9,8 @@
         
     </div>
 </header>
-
+<div id="site-main">
 <router-outlet></router-outlet>
-
+<div class="push"></div>
+</div>
 <footer>Developed by Josep Salvat</footer>

@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.items-wrap{
+    background: $color3;
+    margin: auto ;
+    border: 2px solid $color4;
+    max-width: 700px;
+}
+.items{
+    background: black;
+}
+.container-table{
+    display:flex;
+    flex-direction: row;
+    border-bottom: 2px solid $color4;
+    font-weight: $font-weight-bold;
+
+}
+.title-table{
+    margin: auto;
+    
+    
+}
+.name-table{
+     width: 50%;
+     text-align: center;
+     font-size: $font-normal;
+     font-weight: $font-weight-semibold;
+}
+.date-table{
+     width: 50%;
+     text-align: center;
+ }
+.answered-table-checked{
+    width: 40%;
+    text-align: center;
+    color: green;
+    font-size: $font-large;
+
+}
+.answered-table-notchecked{
+    width: 40%;
+    text-align: center;
+    color: red;
+    font-size: $font-large;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    background: $color2;
+    border-bottom: 1px solid $color4;
+    padding: 1%;
+        &:hover{
+            border: 1px solid $color3;
+            margin-left: 2%;
+            margin-right:2%;
+             opacity: 0.9;
+        }
+    cursor: pointer;
+   
+}
