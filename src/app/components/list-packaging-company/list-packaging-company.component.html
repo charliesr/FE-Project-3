@@ -9,5 +9,14 @@
       </p>
       <p>Created By: {{quotation.createdBy.username}}</p>
     </div>
+
+    <div *ngIf="quotations && quotation.answered === true" class="items" [routerLink]="['/', quotation._id]">
+      <p>Name: {{quotation.name}}</p>
+      <p>Answered:
+        <span *ngIf="quotation.answered === true">Answered</span>
+      </p>
+      <p>Created By: {{quotation.createdBy.username}}</p>
+    </div>
+
     <div>
     </div>

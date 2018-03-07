@@ -1,11 +1,15 @@
 <header>
-    <div class="message-intro" *ngIf="!user">Welcome, please Login or Sign Up</div>
-    <div class="user" *ngIf="user">
-        Welcome {{user.username}}
+    <div class="container">
+        <div class="message-intro" *ngIf="!user">Welcome, please Log In or Sign Up</div>
+        <div *ngIf="user">Welcome {{user.username}}
+            <div class="logout" *ngIf="user">
+                <a (click)="logout()">logout</a>
+            </div>
+        </div>
+        
     </div>
-    <div class="logout" *ngIf="user"><a (click)="logout()">logout</a></div>
 </header>
 
 <router-outlet></router-outlet>
 
-<footer>TEST</footer>
+<footer>Developed by Josep Salvat</footer>

@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListFoodCompanyComponent implements OnInit {
 
-@Input() quotations: string;
+  @Input() quotations: any;
+  formattedDate: String;
 
   constructor() {}
 

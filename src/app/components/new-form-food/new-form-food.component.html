@@ -1,18 +1,16 @@
-<div class="container">
-    <div class="form-login">
-        <p class="title">NEW QUOTATION</p>
-        <form (ngSubmit)="newQuotationForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
-            <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-                <label>Producto</label>
-                <input type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required minlength="4" [disabled]="processing"
-                />
+<div class="form-login">
+    <div class="title">NEW QUOTATION</div>
+    <form (ngSubmit)="newQuotationForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+        <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+            <label>Producto</label>
+            <input class="input" type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required minlength="4" [disabled]="processing"
+            />
+        </div>
+        <div class="field-submit">
+            <button class="btn" type="submit" [disabled]="processing">Send Request</button>
+            <div *ngIf="feedbackEnabled && form.invalid">
+                <p class="validation">there are errors in the form, please review the fields</p>
             </div>
-            <div class="field submit">
-                <button type="submit" [disabled]="processing">Send Request</button>
-                <div *ngIf="feedbackEnabled && form.invalid">
-                    <p class="validation">there are errors in the form, please review the fields</p>
-                </div>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>

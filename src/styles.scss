@@ -1,0 +1,180 @@
+
+/* You can add global styles to this file, and also import other style files */
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+//Base Palette
+
+$color1: #E4F9F5;
+$color2: rgb(155, 223, 214);
+$color3: #11999E;
+$color4: #40514E;
+
+
+//Base Settings SASS
+
+$base-spacing-unit: 24px;
+$base-font-size: 16px;
+$base-line-height:$base-spacing-unit;
+
+//Spacing Sizes
+
+$spacing-smaller: $base-spacing-unit / 3;
+$spacing-small: $base-spacing-unit / 2;
+$spacing-normal: $base-spacing-unit;
+$spacing-large: $base-spacing-unit * 1.5;
+$spacing-larger: $base-spacing-unit * 2;
+$spacing-largest: $base-spacing-unit * 3;
+
+//Fonts
+
+$font-xs: $base-font-size / 1.6;
+$font-small: $base-font-size / 1.3;
+$font-normal: $base-font-size;
+$font-large: $base-font-size * 1.5;
+$font-larger: $base-font-size * 2;
+$font-largest: $base-font-size * 3;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heading: $font-weight-bold;
+
+//Header Sizes
+
+$header-size-1: $base-font-size * 2;
+$header-size-2: $base-font-size * 1.4;
+$header-size-3: $base-font-size * 1.35;
+$header-size-4: $base-font-size * 1.3;
+$header-size-5: $base-font-size;
+$header-size-6: $base-font-size * 0.9;
+
+
+//header
+header{
+  background: $color2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $color4;
+
+}
+footer{
+  background: $color2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid $color4;
+  bottom: 0px; 
+  width: 100%;
+  margin-top: 5%;
+  position: absolute;
+
+}
+
+
+
+tab .tabs__panel[class]{
+  background: $color2;
+  width: 100%;
+  margin: auto;
+  height: 50%;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid $color4;
+}
+
+ .tabs__tab[class]{
+   background: $color4!important;
+   color: $color2;
+ }
+
+
+//BODY
+
+//font
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+
+body{
+  background: $color1;
+  color: $color4;
+  margin: 0px;
+  padding: 0px;
+  line-height: $base-line-height;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+
+a{
+  color: $color2;
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: $font-weight-heading;
+}
+
+h1{ font-size: $header-size-1;
+   text-align: center;
+  text-decoration-line: underline;
+  }
+h2{ font-size: $header-size-2;}
+h3{ font-size: $header-size-3;}
+h4{ font-size: $header-size-4;}
+h5{ font-size: $header-size-5;}
+h6{ font-size: $header-size-6;}
+
+.field{
+  padding: $spacing-smaller;
+}
+.input{
+  width: 80%;
+  border-left: 4px solid $color4;
+  height: 5vh;
+  padding-left: 2%;
+  font-size: $font-normal;
+}
+
+.logout{
+  width: 20%;
+  background: $color3;
+  float: right;
+  height: 4vh;
+  cursor: pointer;
+  a{
+    color: $color1;
+   }
+   &:hover{
+      background: $color3;
+    }
+  
+}
+
+.btn{
+  width: 20%;
+  background: $color3;
+  margin: center;
+  height: 4vh;
+  cursor: pointer;
+  a{
+    color: $color1;
+   }
+   &:hover{
+      background: $color3;
+    }
+  border: 1px solid $color4;
+  border-radius: 5px;
+  font-size: $font-normal;
+}
+

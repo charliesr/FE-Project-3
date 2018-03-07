@@ -1,8 +1,16 @@
+<ng-container *ngIf="quotations && user">
 <p>
-  {{quotations?.name}}
-  Answered: <span *ngIf="quotations?.answered === false">Not yet</span>
+  {{quotations.name}}
+  Answered: <span *ngIf="quotations.answered === false">Not yet</span><span *ngIf="quotations.answered === true">Yes!</span>
 </p>
-<div *ngIf="user?.foodCompany===false">
+  <div *ngFor="let answer of quotations.answeredBy; let i = index" class="for-div">
+    {{answer.user.username}}
+     {{answer.price}}
+       
+  </div>
+  
+
+<div *ngIf="user.foodCompany===false">
   <a [routerLink]="['/priceless',id]">PRICE THIS PRODUCT</a>
 </div>
-
+</ng-container>

@@ -5,7 +5,7 @@
 
       <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
         <label>Username</label>
-        <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"
+        <input class="input" type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="4" [disabled]="processing"
         />
         <div *ngIf="feedbackEnabled && usernameField.errors">
           <p *ngIf="usernameField.errors.required" class="validation">username required</p>
@@ -15,7 +15,7 @@
 
       <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
         <label>Password</label>
-        <input type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing"
+        <input class="input" type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="4" [disabled]="processing"
         />
         <div *ngIf="feedbackEnabled && passwordField.errors">
           <p *ngIf="passwordField.errors.required" class="validation">password required</p>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="field submit">
-        <button type="submit" [disabled]="processing">SignUp</button>
+        <button class="btn" type="submit" [disabled]="processing">SignUp</button>
         <div *ngIf="feedbackEnabled && form.invalid">
           <p class="validation">there are errors in the form, please review the fields</p>
         </div>

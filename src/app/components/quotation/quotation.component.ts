@@ -19,7 +19,7 @@ export class QuotationComponent implements OnInit {
     this.route.params.subscribe(params => {
 
     this.id = params['_id']; // (+) converts string 'id' to a number
-      console.log('lololol', this.id);
+      console.log('lololol');
       // In a real app: dispatch action to load the details here.
     });
 
