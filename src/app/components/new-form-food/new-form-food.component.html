@@ -12,7 +12,7 @@
             />
         </div>
         <div class="field" [ngClass]="{'has-error': feedbackEnabled && heightField.errors}">
-            <label>Height</label>
+            <label>Length</label>
             <input class="input" type="text" name="height" [(ngModel)]="height" #heightField="ngModel" required minlength="1" [disabled]="processing"
             />
         </div>
