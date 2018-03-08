@@ -3,7 +3,22 @@
     <form (ngSubmit)="newQuotationForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
         <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
             <label>Product</label>
-            <input class="input" type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required minlength="4" [disabled]="processing"
+            <input class="input" type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required minlength="1" [disabled]="processing"
+            />
+        </div>
+        <div class="field" [ngClass]="{'has-error': feedbackEnabled && widthField.errors}">
+            <label>Width</label>
+            <input class="input" type="text" name="width" [(ngModel)]="width" #widthField="ngModel" required minlength="1" [disabled]="processing"
+            />
+        </div>
+        <div class="field" [ngClass]="{'has-error': feedbackEnabled && heightField.errors}">
+            <label>Height</label>
+            <input class="input" type="text" name="height" [(ngModel)]="height" #heightField="ngModel" required minlength="1" [disabled]="processing"
+            />
+        </div>
+        <div class="field" [ngClass]="{'has-error': feedbackEnabled && colorsField.errors}">
+            <label>Colors</label>
+            <input class="input" type="text" name="colors" [(ngModel)]="colors" #colorsField="ngModel" required minlength="1" [disabled]="processing"
             />
         </div>
         <div class="field-submit">
@@ -14,3 +29,8 @@
         </div>
     </form>
 </div>
+
+<div class="new-request">
+    <a (click)="backClicked()">GO BACK</a>
+</div>
+

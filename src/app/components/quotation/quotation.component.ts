@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-quotation',
@@ -11,11 +13,14 @@ export class QuotationComponent implements OnInit {
   @Input() quotations: any;
   user: any;
   id: any;
-  constructor(private route: ActivatedRoute, private authService: AuthService, private router: Router) { }
 
+  constructor(private _location: Location, private route: ActivatedRoute, private authService: AuthService, private router: Router) { }
+
+  backClicked() {
+    this._location.back();
+  }
 
   ngOnInit() {
-
     this.route.params.subscribe(params => {
 
     this.id = params['_id']; // (+) converts string 'id' to a number
@@ -30,5 +35,6 @@ export class QuotationComponent implements OnInit {
         console.log(user);
       });
   }
+
 
 }

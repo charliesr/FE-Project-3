@@ -31,7 +31,13 @@ export class QuotationsService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${apiUrl}/new`, {name: newQuotation}, options)
+    const newData = {
+      name: newQuotation.name,
+      width: newQuotation.width,
+      height: newQuotation.height,
+      colors: newQuotation.colors,
+    };
+    return this.httpClient.post(`${apiUrl}/new`, newData , options)
     .toPromise();
   }
 

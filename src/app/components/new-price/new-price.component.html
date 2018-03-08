@@ -1,12 +1,13 @@
-<div class="container">
+<div class="form-login">
   <form (ngSubmit)="handlePutPrice(form)" #form="ngForm" novalidate>
     <div>
-      <label for="price">Price</label>
+      <div class="field">Price</div>
       <input type="text" name="price" [(ngModel)]="price" #priceField="ngModel" required [disabled]="processing" />
+      €/Kg
       <div *ngIf="feedbackEnabled && priceField.errors">
         <p *ngIf="priceField.errors.required" class="validation">Please, price is required</p>
       </div>
     </div>
-    <button type="submit">Put Price</button>
+    <button class="btn" type="submit">Put Price</button>
   </form>
 </div>

@@ -52,5 +52,90 @@
     background: $color2;
     border-bottom: 1px solid $color4;
     padding: 1%;
-     
+}
+.button-container{
+    margin: auto;
+  width: 6%;
+}
+.new-request{
+    background: $color3;
+    text-align: center;
+    font-weight: $font-weight-semibold;
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid $color4;
+    cursor: pointer;
+    margin-top: 5%;
+    max-width: 150px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+.data{
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+    border: 2px solid $color4;
+    border-radius: 15px;
+    padding: 2%;
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    
+
+}
+.width-height{
+    background: blue;
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+.name-quot{
+    background: $color3;
+    color: $color2;
+    font-weight: 700;
+    text-align: center;
+}
+
+.width-quot{
+font-size: $base-font-size;
+}
+
+.height-quot{
+font-size: $base-font-size;
+}
+
+.color-quot{
+
+}
+
+.img{
+    width: 80%;
+  margin-top: 2%;
+  max-width: 300px;
+}
+.image{
+    display: flex;
+}
+.width{
+    height: 8vh;
+    margin: auto;
+    
+}
+.height{
+    width: 50%;
+    margin: auto;
+}
+
+.rgb{
+    background: linear-gradient(to right, #ff0000 0%,#45ff28 51%,#0004ff 100%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.black-white{
+    background: linear-gradient(to right, #000000 0%,#ffffff 100%); 
+    text-align: center;
 }

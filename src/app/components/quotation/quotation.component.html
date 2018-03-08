@@ -1,5 +1,22 @@
 <ng-container *ngIf="quotations && user">
+<div class="data">
+  <div class="name-quot">
+    <div class="title-table">{{quotations.name}}</div>
+  </div>
+  <div class="image">
+    <img src="/assets/images/area.png" class="img">
+    <div class="width">{{quotations.width}}mm</div>
+  </div>
+  <div class="height">{{quotations.height}} mm</div>
 
+  <div class="color-quot">
+    <div class="title-table">
+     <div class="rgb" *ngIf="quotations.colors === 'RGB'">{{quotations.colors}}</div> 
+    <div class="black-white" *ngIf="quotations.colors === 'none'">{{quotations.colors}}</div>
+    </div>
+  </div>
+</div>
+<div *ngIf="quotations?.answeredBy.length !== 0">
 <div class="items-wrap">
   <div class="container-table">
     <div class="name-table">
@@ -12,17 +29,24 @@
       Price
     </div>
   </div>
-    
+     
       <div class="items" *ngFor="let answer of quotations.answeredBy; let i = index">
         <div class="name-table">{{quotations.name}}</div>
         <div class="company-table">{{answer.user.username}}</div>
         <div class="title-table">{{answer.price}} €/Kg</div>
       </div>
-    
+    </div>
    
   </div>
 
-<div *ngIf="user.foodCompany===false && quotations.answered == false" >
-  <a [routerLink]="['/priceless',id]">PRICE THIS PRODUCT</a>
-</div>
+
 </ng-container>
+
+<div *ngIf="user?.foodCompany===false && quotations.answered == false">
+  <div class="new-request">
+  <a [routerLink]="['/priceless',id]">PRICE IT</a>
+</div>
+</div>
+<div class="new-request">
+  <a (click)="backClicked()">GO BACK</a>
+</div>
